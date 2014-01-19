@@ -44,6 +44,7 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int mlk=0x7f060005;
         public static final int speech=0x7f060002;
         public static final int stop=0x7f060004;
         public static final int wiki=0x7f060003;
@@ -75,5 +76,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int button_style=0x7f070002;
     }
 }

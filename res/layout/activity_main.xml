@@ -11,6 +11,7 @@
 
     <Button
         android:id="@+id/wiki_button"
+        style="@style/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -20,6 +21,7 @@
 
     <Button
         android:id="@+id/play_button"
+        style="@style/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/wiki_button"
@@ -35,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/wiki_button"
         android:layout_centerHorizontal="true"
+        android:contentDescription="@string/mlk"
         android:layout_marginTop="17dp"
         android:src="@drawable/mlk" />
 
@@ -50,13 +53,7 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/mlk"
             android:text="@string/speech" />
     </ScrollView>
-
-
 
 </RelativeLayout>
