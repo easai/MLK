@@ -10,22 +10,10 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/wiki_button"
-        style="@style/button_style"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="23dp"
-        android:onClick="openWiki"
-        android:text="@string/wiki" />
-
-    <Button
         android:id="@+id/play_button"
         style="@style/button_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/wiki_button"
-        android:layout_alignBottom="@id/wiki_button"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
         android:onClick="mediaStart"
@@ -55,5 +43,24 @@
             android:layout_height="wrap_content"
             android:text="@string/speech" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/wiki_button"
+        style="@style/button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="openWiki"
+        android:text="@string/wiki" />
+
+    <ImageButton
+        android:id="@+id/share_button"
+        android:contentDescription="Share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mlk"
+        android:layout_alignRight="@+id/scrollView1"
+        android:src="@android:drawable/ic_menu_share" />
 
 </RelativeLayout>

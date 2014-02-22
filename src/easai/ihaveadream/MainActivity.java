@@ -10,7 +10,9 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -25,6 +27,18 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		playButton = (Button) findViewById(R.id.play_button);
 		mlk = MediaPlayer.create(this, R.raw.ihaveadream);
+		ImageButton shareButton = (ImageButton)findViewById(R.id.share_button);
+		OnClickListener listener=new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent=new Intent(Intent.ACTION_SEND);
+				intent.setType("text/plain");
+				intent.putExtra(Intent.EXTRA_TEXT, "Check up this app: MLK https://github.com/easai/MLK");
+				startActivity(intent);
+			}
+		};
+		shareButton.setOnClickListener(listener);
 	}
 
 	@Override
@@ -47,7 +61,7 @@ public class MainActivity extends Activity {
 	}
 
 	public void mediaStart(View v) {
-		if (mlk.isPlaying()) { // 再生中
+		if (mlk.isPlaying()) { 
 			playButton.setText("Play");
 			mlk.stop();
 			try {
@@ -57,7 +71,7 @@ public class MainActivity extends Activity {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		} else { // 停止中
+		} else { 
 			playButton.setText("Pause");
 			mlk.start();
 		}
